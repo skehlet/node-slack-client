@@ -617,6 +617,7 @@ Client = (function(_super) {
         this.reconnect();
         return this.emit('team_migration_started', message);
       case 'reaction_added':
+        console.log('reaction_added MESSAGE:', message);
         return this.emit('reaction_added', new Message(this, message));
       default:
         if (message.reply_to) {

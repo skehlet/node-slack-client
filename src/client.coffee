@@ -501,6 +501,7 @@ class Client extends EventEmitter
         @emit 'team_migration_started', message
 
       when 'reaction_added'
+        console.log('reaction_added MESSAGE:', message);
         @emit 'reaction_added', new Message(@, message)
 
       else
