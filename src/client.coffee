@@ -503,6 +503,9 @@ class Client extends EventEmitter
       when 'reaction_added'
         @emit 'reaction_added', new Message(@, message)
 
+      when 'reaction_removed'
+        @emit 'reaction_removed', new Message(@, message)
+
       else
         if message.reply_to
           if message.type == 'pong'

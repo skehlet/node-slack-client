@@ -618,6 +618,8 @@ Client = (function(_super) {
         return this.emit('team_migration_started', message);
       case 'reaction_added':
         return this.emit('reaction_added', new Message(this, message));
+      case 'reaction_removed':
+        return this.emit('reaction_removed', new Message(this, message));
       default:
         if (message.reply_to) {
           if (message.type === 'pong') {
